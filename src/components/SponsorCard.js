@@ -1,6 +1,6 @@
 import react, {useEffect, useState} from 'react';
 import React from "react";
-import {SponsorData} from "../assets/SponsorCard";
+import {SponsorData} from "../assets/SponsorData";
 
 
 const SponsorCard = () => {

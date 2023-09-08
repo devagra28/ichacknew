@@ -12,6 +12,7 @@ import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
 import {
   Drawer,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -66,7 +67,8 @@ export const Navbar = () => {
     </Box>
   );
 
-  const NavLink = styled(Typography)(({ theme }) => ({
+  const NavLink = styled(Link)(({ theme }) => ({
+    textDecoration: "none",
     fontSize: "14px",
     color: "#4F5361",
     fontWeight: "bold",
@@ -135,11 +137,11 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          <NavLink variant="body2" to="/">Home</NavLink>
-          <NavLink variant="body2" to="/sponsor">Sponsors</NavLink>
-          <NavLink variant="body2" to="/track">Tracks</NavLink>
-          <NavLink variant="body2" to="/schedule">Schedule</NavLink>
-          <NavLink variant="body2" to="/contact">Contact</NavLink>
+          <NavLink variant="body2" href="/">Home</NavLink>
+          <NavLink variant="body2" href="/sponsor">Sponsors</NavLink>
+          <NavLink variant="body2" href="/track">Tracks</NavLink>
+          <NavLink variant="body2" href="/schedule">Schedule</NavLink>
+          <NavLink variant="body2" href="/contact">Contact</NavLink>
         </NavbarLinksBox>
       </Box>
 
