@@ -32,7 +32,6 @@ export const Team = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 
