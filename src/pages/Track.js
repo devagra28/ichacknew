@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react'
 import Navbar from "../components/Navbar";
 import TracksCard from "../components/TrackCard";
 import AOS from "aos";
