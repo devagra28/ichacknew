@@ -2,9 +2,7 @@ import React from "react";
 import {TracksData} from "../assets/TrackData";
 import CustomButton from "./CustomButton";
 
-
 const TracksCard = () => {
-
     return(
         <>
             {TracksData.map((Tracks, index) => (
