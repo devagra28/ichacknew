@@ -7,7 +7,7 @@ export const Team = () => {
         <div className='bg-[#e3ebfa]'>
             <Navbar />
             <div className="flex flex-col items-center justify-center ">
-                <h1 className="text-6xl text-center text-transparent bg-clip-text bg-gradient-to-tl from-blue-950 to-blue-500 font-extrabold mb-[5vh]">
+                <h1 className="text-6xl text-center font-[#5A6473] font-bold mb-[5vh] ">
                     TEAM
                 </h1>
             </div>
