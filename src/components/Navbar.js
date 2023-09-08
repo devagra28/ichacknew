@@ -1,4 +1,5 @@
 import * as React from "react";
+import {Link as RouterLink} from 'react-router-dom';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -38,6 +39,14 @@ export const Navbar = () => {
 
     setMobileMenu({ ...mobileMenu, [anchor]: open });
   };
+  const menuItems = [
+    { text: "Home", icon: <HomeIcon />, href: "/" },
+    { text: "Sponsor", icon: <FeaturedPlayListIcon />, href: "/sponsor" },
+    { text: "Tracks", icon: <MiscellaneousServicesIcon />, href: "/track" },
+    { text: "Schedule", icon: <ListAltIcon />, href: "/schedule" },
+    { text: "Contact", icon: <ContactsIcon />, href: "/contact" },
+    { text: "Team", icon: <ContactsIcon />, href: "/team" },
+  ];
 
   const list = (anchor) => (
     <Box
@@ -47,22 +56,16 @@ export const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home", "Sponsors", "Track", "Schedule", "Team", "Contact"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
+        {menuItems.map((item, index) => (
+          <ListItem key={item.text} disablePadding>
+            <Link component={RouterLink} to={item.href}>
               <ListItemButton>
-                <ListItemIcon>
-                  {index === 0 && <HomeIcon />}
-                  {index === 1 && <FeaturedPlayListIcon />}
-                  {index === 2 && <MiscellaneousServicesIcon />}
-                  {index === 3 && <ListAltIcon />}
-                  {index === 4 && <ContactsIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.text} />
               </ListItemButton>
-            </ListItem>
-          )
-        )}
+            </Link>
+          </ListItem>
+        ))}
       </List>
     </Box>
   );
@@ -137,11 +140,24 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          <NavLink variant="body2" href="/">Home</NavLink>
-          <NavLink variant="body2" href="/sponsor">Sponsors</NavLink>
-          <NavLink variant="body2" href="/track">Tracks</NavLink>
-          <NavLink variant="body2" href="/schedule">Schedule</NavLink>
-          <NavLink variant="body2" href="/contact">Contact</NavLink>
+          <NavLink variant="body2" href="/">
+            Home
+          </NavLink>
+          <NavLink variant="body2" href="/sponsor">
+            Sponsors
+          </NavLink>
+          <NavLink variant="body2" href="/track">
+            Tracks
+          </NavLink>
+          <NavLink variant="body2" href="/schedule">
+            Schedule
+          </NavLink>
+          <NavLink variant="body2" href="/contact">
+            Contact
+          </NavLink>
+          <NavLink variant="body2" href="/team">
+            Team
+          </NavLink>
         </NavbarLinksBox>
       </Box>
 
@@ -153,7 +169,6 @@ export const Navbar = () => {
           gap: "1rem",
         }}
       >
-        
         <CustomButton
           backgroundColor="#0F1B4C"
           color="#fff"
