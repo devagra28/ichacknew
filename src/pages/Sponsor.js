@@ -7,9 +7,9 @@ function Sponsor() {
     <>
         <div className='bg-[#e3ebfa]'>
             <Navbar />
-            <div className='flex flex-col items-center justify-center my-[2%]'>
+            <div className='flex flex-col items-center justify-center'>
                 <div>
-                    <h1 className='text-6xl text-center text-transparent bg-clip-text bg-gradient-to-tl from-blue-950 to-blue-500 font-extrabold pb-[5%]'>
+                    <h1 className='text-6xl text-center text-transparent bg-clip-text bg-gradient-to-tl from-blue-950 to-blue-500 font-extrabold mb-[5vh]'>
                         SPONSORS
                     </h1>
                 </div>
