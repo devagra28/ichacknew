@@ -16,7 +16,7 @@ const TracksCard = () => {
                                     <h1 className='font-bold text-4xl pb-[1%] justify-around '>{Tracks.TracksName}</h1>
                                 </div>
                                 <div className='pb-[1%]'>
-                                    <p className='px-3 justify-around text-justify'>
+                                    <p className='px-3 py-[1%] justify-around text-justify text-gray-500 text-2xl'>
                                         {Tracks.TracksAbout}
                                     </p>
                                 </div>
