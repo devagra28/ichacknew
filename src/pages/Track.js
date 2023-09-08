@@ -23,7 +23,7 @@ function Track() {
     <div className='bg-[#e3ebfa]'>
         <Navbar />
         <div className='px-[1%]' data-aos="fade-up">
-            <div className='justify-center pb-[5%]' >
+            <div className='justify-center pb-[3%]' >
                 <h1 className='text-6xl text-center  font-[#5A6473] font-bold'>TRACKS</h1>
             </div>
             <TracksCard />
