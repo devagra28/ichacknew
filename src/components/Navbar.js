@@ -11,6 +11,7 @@ import ContactsIcon from "@mui/icons-material/Contacts";
 // import logoImg from "../media/ic-logo-white.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
+import About from "../pages/About";
 import {
   Drawer,
   Link,
@@ -44,7 +45,7 @@ export const Navbar = () => {
     { text: "Sponsor", icon: <FeaturedPlayListIcon />, href: "/sponsor" },
     { text: "Tracks", icon: <MiscellaneousServicesIcon />, href: "/track" },
     { text: "Schedule", icon: <ListAltIcon />, href: "/schedule" },
-    { text: "Contact", icon: <ContactsIcon />, href: "/contact" },
+    { text: "About", icon: <ContactsIcon />, href: "/About" },
     { text: "Team", icon: <ContactsIcon />, href: "/team" },
   ];
 
@@ -152,8 +153,8 @@ export const Navbar = () => {
           <NavLink variant="body2" href="/schedule">
             Schedule
           </NavLink>
-          <NavLink variant="body2" href="/contact">
-            Contact
+          <NavLink variant="body2" href="/about">
+            About
           </NavLink>
           <NavLink variant="body2" href="/team">
             Team
