@@ -13,7 +13,7 @@ const SponsorCard = () => {
                         <div className="flex flex-col justify-between p-4 leading-normal">
                             <h1 className=" text-4xl font-bold tracking-tight text-gray-900 mb-[2vh]">{sponsor.sponsorName}</h1>
                             <p className="mb-[3vh] font-normal text-gray-500 text-2xl text-justify">{sponsor.sponsorAbout}</p>
-                            <div className='pb-[1%]'>
+                            <div className='pb-[1%] xl:max-w-[9vw]'>
                                 <a href="/">
                                     <CustomButton
                                         backgroundColor="#0F1B4C"
