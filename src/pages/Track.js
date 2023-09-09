@@ -3,8 +3,6 @@ import TracksCard from "../components/TrackCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-
 function Track() {
     AOS.init({
         startEvent: 'DOMContentLoaded',

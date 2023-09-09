@@ -18,8 +18,8 @@ const TracksCard = () => {
                                         {Tracks.TracksAbout}
                                     </p>
                                 </div>
-                                <div className='px-3'>
-                                    <a href="/">
+                                <div className='px-3 xl:max-w-[11vw]'>
+                                    <a href="/" className=''>
                                         <CustomButton
                                             backgroundColor="#0F1B4C"
                                             color="#fff"
