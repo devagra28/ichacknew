@@ -16,10 +16,11 @@ const CustomButton = ({
     fontSize: "14px",
     cursor: "pointer",
     padding: "0.5rem 1.25rem",
-    borderRadius: "7px",
+    borderRadius: "5px",
     textTransform: "none",
-    display: "block",
+    // display: "flex",
     border: "2px solid transparent",
+    borderColor: color,
     "&:hover": {
       backgroundColor: color,
       color: backgroundColor,

@@ -2,6 +2,112 @@
   text-align: center;
 }
 
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fontSet {
+  font-family: 'DM Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.clock {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  position: relative;
+  /* margin: a/; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  /* background: linear-gradient(270deg, #051817, #0e3839); */
+  /* height: 180px;
+  width: 360px; */
+  /* color: #06f1f6; */
+  /* text-shadow: 1px 1px 7px; */
+  /* border-radius: 15px;
+  border: 2px solid silver;
+  box-shadow: 0 0 5px 25px; */
+}
+.clock-border{
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.5em;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.colon{
+  color:#fff;
+  font-size: 50px;
+}
+
+.clock-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+/* .clock section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+} */
+
+.clock-letter{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock section p {
+  font-size: 4rem;
+}
+.clock section small {
+  color: silver;
+  text-shadow: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
