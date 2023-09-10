@@ -1,36 +1,41 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { Box, makeStyles, styled } from "@mui/material";
-import {ReactComponent as LandingLogo} from '../images/ichack23landing.svg';
+import { ReactComponent as LandingLogo } from "../images/ichack23landing.svg";
 import CustomButton from "../components/CustomButton";
 import Clock from "../components/Clock";
 
-const GradientBackground= styled(Box)`
-  background: linear-gradient(180deg, #00023E, #4C0087, #0014CC, #9E28FED9, #A128FF00);
+const GradientBackground = styled(Box)`
+  background: linear-gradient(
+    180deg,
+    #00023e,
+    #4c0087,
+    #0014cc,
+    #9e28fed9,
+    #a128ff00
+  );
   width: 100%;
   height: 100vh;
+`;
 
-`
-const GradientBackgroundWhiteBlack= styled(Box)`
-  background: linear-gradient(180deg, #FFFFFF, #000000);
+const GradientBackgroundWhiteBlack = styled(Box)`
+  background: linear-gradient(180deg, #ffffff, #000000);
   width: 100%;
   height: 100vh;
+`;
 
-`
-
-const Landing= styled(Box)`
+const Landing = styled(Box)`
   overflow: hidden;
-`
-const Button=styled(Box)`
+`;
+
+const Button = styled(Box)`
   display: flex;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-`
+`;
 
-export const Home =()=>{
-
-
+export const Home = () => {
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
@@ -39,7 +44,7 @@ export const Home =()=>{
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("September 30,2023 ").getTime();
+    const countDownDate = new Date("September 30, 2023 ").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -55,7 +60,6 @@ export const Home =()=>{
 
       if (distance < 0) {
         // Stop Timer
-
         clearInterval(interval.current);
       } else {
         // Update Timer
@@ -71,38 +75,46 @@ export const Home =()=>{
     startTimer();
   });
 
-  return(
+  return (
     <>
-    <Landing>
-    <GradientBackground>
-      <Navbar/>
-      <Box>
-      <LandingLogo style={{marginLeft:'auto',marginRight:'auto', width: '80%', }}/>
+      <Landing>
+        <GradientBackground>
+          <Navbar />
+          <Box>
+            <LandingLogo
+              style={{ marginLeft: "auto", marginRight: "auto", width: "80%" }}
+            />
+          </Box>
+          <Clock
+            timerDays={timerDays}
+            timerHours={timerHours}
+            timerMinutes={timerMinutes}
+            timerSeconds={timerSeconds}
+          />
+          <Button>
+            <CustomButton
+              backgroundColor="#000"
+              color="#fff"
+              buttonText="Register Here"
+            />
+          </Button>
+        </GradientBackground>
+      </Landing>
+      <Box style={{ fontFamily: "DM Mono", fontWeight: 500 }}>
+        <div>
+          <div className="bar">
+            <span className="bar_content">
+              21st October | Manipal University Jaipur | IEEE India Council |
+              21st October | Manipal University Jaipur | IEEE India Council |
+              21st October | Manipal University Jaipur | IEEE India Council
+            </span>
+          </div>
+        </div>
       </Box>
-      <Clock
-        timerDays={timerDays}
-        timerHours={timerHours}
-        timerMinutes={timerMinutes}
-        timerSeconds={timerSeconds}
-      />
-      <Button>
-        <CustomButton
-          backgroundColor="#000"
-          color="#fff"
-          buttonText="Register Here"
-        />
-      </Button>
-    </GradientBackground>
-    <Box>
-      <h1>hello</h1>
-    </Box>
-    <GradientBackgroundWhiteBlack>
 
-    </GradientBackgroundWhiteBlack>
-    
-    </Landing>
+      <GradientBackgroundWhiteBlack></GradientBackgroundWhiteBlack>
     </>
-  )
-}
+  );
+};
 
 export default Home;
