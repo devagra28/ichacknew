@@ -182,5 +182,5 @@ html {
 }
 
 .animated {
-  animation: none; /* Reset animation on initial render */
+  animation: none; 
 }
