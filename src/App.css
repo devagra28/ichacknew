@@ -142,3 +142,45 @@
     transform: rotate(360deg);
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bar {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 0;
+  background-color: transparent;
+  color: #0014cc;
+  font-family: Gelasio;
+  font-size: 24px;
+  overflow: hidden;
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
+}
+
+.bar_content {
+  display: block;
+  white-space: nowrap;
+  animation: move 45s linear infinite;
+}
+
+@keyframes move {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animated {
+  animation: none; 
+}
